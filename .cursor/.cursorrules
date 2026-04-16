@@ -1,0 +1,34 @@
+# ResearchKit Cursor AI Rules
+
+## Project Context
+This is a ResearchKit research project following structured research workflows.
+
+## Research Workflow
+1. **Plan**: Define research questions, objectives, and methodology
+2. **Execute**: Gather sources, document findings, maintain citations
+3. **Synthesize**: Analyze findings and create comprehensive reports
+
+## Key Principles
+- All claims must be properly cited
+- Maintain source quality ratings (1-5 stars)
+- Follow the research constitution in `.researchkit/memory/constitution.md`
+- Keep findings organized chronologically
+- Cross-reference important claims
+
+## File Structure
+- `plan.md`: Research question, objectives, and strategy
+- `sources.md`: Bibliography with quality ratings
+- `findings.md`: Research notes and discoveries
+- `synthesis.md`: Final analysis and conclusions
+
+## Citation Standards
+- Use consistent citation format throughout
+- Include source URLs and access dates
+- Rate source quality and note any bias
+- Maintain complete bibliography
+
+## When Editing Research Files
+- Preserve existing citation formats
+- Maintain chronological order in findings
+- Keep source quality ratings consistent
+- Follow the established document structure
