@@ -1,0 +1,211 @@
+/**
+ * /work/[slug] — case study article layout + feature media rows.
+ */
+.case-study-article {
+  display: grid;
+  gap: var(--space-10);
+}
+
+/* Problem statement, What was created, Results — not feature titles inside “What was created” */
+h2.case-study-section__heading {
+  margin: 0;
+  font-size: var(--text-page-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-snug);
+  color: var(--color-text-strong);
+  text-align: center;
+}
+
+.case-study-section__prose {
+  margin: 0;
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  color: var(--type-body-color);
+}
+
+.case-study-section__prose--follow {
+  margin-top: var(--space-4);
+}
+
+.case-study-hero {
+  margin-inline: calc(-1 * var(--page-padding-inline));
+  padding: var(--space-10) var(--page-padding-inline) var(--space-12);
+  border-radius: var(--radius-card);
+  color: #ffffff;
+}
+
+.case-study-hero--light-bg {
+  color: var(--color-text-strong);
+}
+
+.case-study-hero--light-bg .case-study-hero__eyebrow {
+  color: var(--color-text-muted);
+}
+
+.case-study-hero--light-bg .case-study-hero__summary {
+  color: var(--color-text-muted);
+}
+
+.case-study-hero--light-bg .case-study-hero__company {
+  color: var(--color-text-muted);
+}
+
+.case-study-hero__inner {
+  display: grid;
+  gap: var(--space-4);
+  max-width: min(42rem, 100%);
+}
+
+.case-study-hero__media {
+  margin-bottom: var(--space-2);
+  max-width: 16rem;
+}
+
+.case-study-hero__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.case-study-hero__eyebrow {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--tracking-category);
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.case-study-hero--light-bg .case-study-hero__eyebrow {
+  letter-spacing: var(--tracking-category);
+}
+
+.case-study-hero__company {
+  margin: 0;
+  font-size: var(--text-body-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-snug);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.case-study-hero__project {
+  margin: 0;
+  font-size: var(--text-document-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-tight);
+  color: inherit;
+}
+
+.case-study-hero__summary {
+  margin: 0;
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-relaxed);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* What was created: per feature — full-bleed image(s), then that feature’s copy directly under */
+.card.created-section {
+  border: none;
+}
+
+.created-section {
+  overflow: hidden;
+}
+
+.created-section__heading {
+  margin: 0;
+  text-align: center;
+}
+
+.created-section__block {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.created-section__bleed {
+  display: grid;
+  gap: var(--space-3);
+  /* Cancel .card horizontal padding so images span the content column */
+  margin-inline: calc(-1 * var(--space-6));
+}
+
+.created-section__figure {
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+
+.created-section__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.created-section__features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-16);
+}
+
+.created-section__copy {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  max-width: 40rem;
+}
+
+.created-section__feature-name {
+  font-size: var(--type-h2-card);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-strong);
+}
+
+.created-section__feature-desc {
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+
+.results-section {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.results-section__cards {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .results-section__cards {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+}
+
+.results-section__card {
+  background: var(--color-card);
+  border: none;
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+}
+
+.results-section__title {
+  margin: 0;
+  font-size: var(--type-h2-card);
+  line-height: var(--leading-snug);
+  color: var(--color-text-strong);
+}
+
+.results-section__description {
+  margin: var(--space-2) 0 0;
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
