@@ -33,4 +33,8 @@ pnpm-debug.log*
 # OS / editor noise
 .DS_Store
 .idea/
-.vscode/
+
+# VS Code / Cursor — ignore local-only files; keep shared workspace settings
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json

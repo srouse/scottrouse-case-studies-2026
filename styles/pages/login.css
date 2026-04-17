@@ -1,9 +1,55 @@
 /**
  * /login — password gate form.
  */
+.login-page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8) var(--page-padding-inline);
+  box-sizing: border-box;
+}
+
+.login-page__panel {
+  width: 100%;
+  max-width: 22rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+h1.login-page__title {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.8vw, 1.45rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-snug);
+  color: var(--color-text-strong);
+  letter-spacing: var(--tracking-tight);
+}
+
+.login-page__lede {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+
+.login-page__form {
+  margin-top: var(--space-6);
+  display: grid;
+  gap: var(--space-4);
+  text-align: left;
+}
+
+.login-page__form label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-strong);
+}
+
 .input-field {
   width: 100%;
-  padding: 0.75rem 0.875rem;
+  padding: 0.625rem 0.75rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
   background: var(--color-surface);
@@ -18,7 +64,8 @@
 }
 
 .btn-primary {
-  padding: 0.75rem 1rem;
+  width: 100%;
+  padding: 0.625rem 1rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-text-strong);
   background: var(--color-text-strong);
@@ -39,6 +86,8 @@
 }
 
 .alert-error {
+  margin: var(--space-4) 0 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
   color: var(--color-error);
-  margin: 0;
 }

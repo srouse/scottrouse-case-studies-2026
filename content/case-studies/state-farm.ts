@@ -3,9 +3,9 @@ import type { CaseStudy } from "@/lib/case-studies/types";
 export const stateFarm = {
   slug: "state-farm",
   companyName: "State Farm",
-  projectTitle: "Modern design system",
+  projectTitle: "Rebuilding a Design System for Scale",
   summary:
-    "Helped the organization iterate toward a modern design system built on tokens and web components so experiences could scale with less drift.",
+    "Transformed a fragmented, unused design system into a scalable foundation using tokens, web components, and cross-team workflows that enabled adoption across a highly diverse engineering organization.",
   published: true,
   category: "INSURANCE",
   coverTint: "#95160F",
@@ -13,42 +13,88 @@ export const stateFarm = {
     src: "/statefarm/state-farm-logo.png",
     alt: ""
   },
-  problemStatement:
-    "Legacy UI stacks and one-off patterns made it hard to evolve digital products at pace. Teams needed a path to modern primitives without boiling the ocean. The work focused on modernizing the design system around tokens and web components, tightening design–dev alignment, and making reuse the default for new work.",
+  problemStatement: `
+  State Farm’s digital experience was deeply fragmented. Teams across the organization used different frameworks, making a single implementation approach impractical, while the existing design system relied on copy-paste HTML templates and brittle CSS that were difficult to update and rarely adopted.
+  
+  Simple changes took months, most teams ignored the system entirely, and user journeys regularly crossed multiple teams with inconsistent UI patterns. This created redundant work, slowed development, and eroded user trust as experiences felt unstable and disconnected.
+  
+  Organizationally, design and development operated in silos with no clear ownership, forcing designers to rely on developers for even minor changes and preventing the system from evolving effectively.
+  `,
   createdFeatures: [
     {
-      name: "Token-first foundations",
-      description:
-        "Shifted core decisions into design tokens so color, type, and spacing stayed consistent as themes and platforms evolved.",
+      name: "Executive Alignment Through Narrative",
+      description: `
+Built momentum for modernization by reframing design tokens and system thinking in terms executives could understand. A series of presentations connected fragmented user experiences directly to the lack of shared design primitives.
+
+A single visual demonstrating how vastly different outputs could be produced without tokens became the inflection point, unlocking executive support and organizational alignment.
+`,
       media: [
         {
-          src: "/statefarm/sf-tokens-plugin.png",
-          alt: "State Farm tokens plugin"
+          src: "/statefarm/sf-case-study-5.png",
+          alt: "State Farm design system"
         }
       ]
     },
     {
-      name: "Web component library",
-      description:
-        "Packaged UI as web components so product teams could compose experiences with shared behavior and accessibility baked in.",
+      name: "Token-Based System with Web Components",
+      description: `
+Established a cross-framework design system using tokens and web components, enabling consistent implementation regardless of underlying technology.
+
+This removed duplication across teams, made components portable, and created a shared foundation that developers could adopt quickly while supporting long-term scalability.
+`,
+      media: [
+        {
+          src: "/statefarm/sf-case-study-4.png",
+          alt: "State Farm design system"
+        }
+      ]
     },
     {
-      name: "Iteration with squads",
-      description:
-        "Partnered with product and engineering to migrate patterns incrementally and prove value before wide rollout.",
+      name: "Figma Token Plugin",
+      description: `
+Developed a Figma plugin that allowed designers to modify tokens directly within design tools, preview changes visually, and commit updates to the codebase.
+
+This removed dependency on developers for routine updates, reduced friction, and gave designers controlled ownership over system-level decisions.
+`,
+      media: [
+        {
+          src: "/statefarm/sf-case-study-3.png",
+          alt: "State Farm design system"
+        }
+      ]
     },
+    {
+      name: "Cross-Team Operating Model",
+      description: `
+Acted as a bridge between design and engineering, establishing shared understanding and workflows across previously siloed teams.
+
+Enabled developers to adopt flexible component patterns while helping designers understand implementation constraints, resulting in a more collaborative and sustainable system.
+`,
+      media: [
+        {
+          src: "/statefarm/sf-case-study-2.png",
+          alt: "State Farm design system"
+        }
+      ]
+    }
   ],
+
   results: [
     {
-      title: "Reusable system foundation",
+      title: "Adoption Across Teams",
       description:
-        "The organization gained a more maintainable system with fewer one-offs and a stronger base for future product work."
+        "Shifted from minimal usage to active adoption, with teams building and contributing components instead of bypassing the system."
     },
     {
-      title: "Clearer design-to-code contracts",
+      title: "Reduced Redundancy",
       description:
-        "Teams worked with better-aligned primitives and shared expectations, reducing friction across design and engineering handoffs."
-    }
+        "Eliminated repeated implementation of core UI patterns, significantly reducing duplicated effort across the organization.",
+    },
+    {
+      title: "Faster System Evolution",
+      description:
+        "Enabled rapid updates to tokens and components that previously took months, improving responsiveness to design changes.",
+    },
   ],
   order: 1,
 } satisfies CaseStudy;

@@ -17,12 +17,16 @@ export default async function CaseStudyPage({ params }: PageProps): Promise<Reac
   const study = getCaseStudyBySlug(slug);
   if (!study) notFound();
 
+  const problem = study.problemStatement?.trim();
+  const features = study.createdFeatures ?? [];
+  const results = study.results ?? [];
+
   return (
     <article className="case-study-article">
       <CaseStudyHero study={study} />
-      <ProblemStatementSection text={study.problemStatement} />
-      <WhatWasCreatedSection features={study.createdFeatures} />
-      <ResultsSection items={study.results} />
+      {problem ? <ProblemStatementSection text={problem} /> : null}
+      {features.length > 0 ? <WhatWasCreatedSection features={features} /> : null}
+      {results.length > 0 ? <ResultsSection items={results} /> : null}
     </article>
   );
 }

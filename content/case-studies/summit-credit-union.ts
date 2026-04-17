@@ -8,7 +8,7 @@ export const summitCreditUnion = {
     "Led the creation of a web component–driven design system and content platform that unified fragmented systems, reduced reliance on client-side complexity, and enabled Summit to regain control over their member experience while avoiding a costly full rebuild.",
   published: true,
   category: "FINANCIAL SERVICES",
-  coverTint: "#3E3E3E",
+  coverTint: "#4D8406",
   coverImage: {
     src: "/summit/summit-logo.png",
     alt: "Summit central"
@@ -21,7 +21,7 @@ export const summitCreditUnion = {
     {
       name: "Strategy Leadership",
       description:
-          "Drove the strategy to break Summit out of a third-party–locked ecosystem by introducing a design system and content platform as a bridge. Enabled teams to ship real products immediately while APIs matured, lead a full Drupal rebuild, and aligned engineering, design, and marketing around a single, scalable path forward.",
+        "Drove the strategy to break Summit out of a third-party–locked ecosystem by introducing a design system and content platform as a bridge. Enabled teams to ship real products immediately while APIs matured, led a full Drupal rebuild, and aligned engineering, design, and marketing around a single, scalable path forward.",
       media: [
         {
           src: "/summit/scu-case-study-8.png",
@@ -33,12 +33,12 @@ export const summitCreditUnion = {
       name: "Web Component Design System",
       description:
         "Built a reusable design system using web components to decouple UI from framework constraints. This allowed teams to work across different technologies while maintaining consistency, significantly reducing the complexity of UI implementation and enabling developers to focus on business logic rather than low-level interface concerns.",
-        media: [
-          {
-            src: "/summit/scu-case-study-2.png",
-            alt: "Summit central"
-          }
-        ]
+      media: [
+        {
+          src: "/summit/scu-case-study-2.png",
+          alt: "Summit central"
+        }
+      ]
     },
     {
       name: "Design Token System",
@@ -65,7 +65,7 @@ export const summitCreditUnion = {
     {
       name: "Drupal to Contentful Migration",
       description:
-        "Led the transition from Drupal 7 to a content-driven architecture using Contentful. Replaced a brittle, copy-paste page creation model with structured content and reusable components, dramatically improving consistency, maintainability, and performance across the website. Pictured is Rates Central, a Contentful Application I built to centralize and manage financial rates as structured content",
+        "Led the transition from Drupal 7 to a content-driven architecture using Contentful. Replaced a brittle, copy-paste page creation model with structured content and reusable components, dramatically improving consistency, maintainability, and performance across the website. Pictured is Rates Central, a Contentful Application I built to centralize and manage financial rates as structured content.",
       media: [
         {
           src: "/summit/scu-case-study-7.png",
@@ -76,21 +76,21 @@ export const summitCreditUnion = {
   ],
 
   results: [
-      {
-        title: "Regained Control of the Experience",
-        description:
-          "Summit moved from being constrained by third-party systems to actively shaping the member experience. The design system and content-driven architecture made it easier to respond to user needs and launch new ideas with confidence."
-      },
-      {
-        title: "Changed How Teams Built Products",
-        description:
-          "Development shifted away from wrestling with UI toward delivering business value. The system reduced the need for deep client-side specialization, gave designers more influence through tokens, and created stronger alignment across teams."
-      },
-      {
-        title: "Improved Performance and Reduced Rebuild Risk",
-        description:
-          "The new architecture improved performance, reduced technical and design debt, and enabled Summit to move off Drupal 7 to a modern CMS stack. Reusable components and structured content created a more scalable foundation for future growth."
-      }
+    {
+      title: "Regained Control of the Experience",
+      description:
+        "Summit moved from being constrained by third-party systems to actively shaping the member experience. The design system and content-driven architecture made it easier to respond to user needs and launch new ideas with confidence."
+    },
+    {
+      title: "Changed How Teams Built Products",
+      description:
+        "Development shifted away from wrestling with UI toward delivering business value. The system reduced the need for deep client-side specialization, gave designers more influence through tokens, and created stronger alignment across teams."
+    },
+    {
+      title: "Improved Performance and Reduced Rebuild Risk",
+      description:
+        "The new architecture improved performance, reduced technical and design debt, and enabled Summit to move off Drupal 7 to a modern CMS stack. Reusable components and structured content created a more scalable foundation for future growth."
+    }
   ],
 
   order: 3

@@ -30,19 +30,81 @@ h1.work-home-hero__title {
 .work-home-hero__avatar-wrap {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   line-height: 0;
-  margin-inline: -0.06em;
+  margin-inline: auto;
+  margin-top: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  isolation: isolate;
+  gap: 0;
 }
 
 .work-home-hero__avatar {
   display: block;
+  flex-shrink: 0;
   width: clamp(2.75rem, 8vw, 4rem);
   height: clamp(2.75rem, 8vw, 4rem);
   border-radius: var(--radius-avatar);
   border: 2px solid var(--color-avatar-border);
   box-shadow: var(--shadow-avatar);
   object-fit: cover;
-  transform: rotate(-4deg);
+  transform-origin: center center;
+  position: relative;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.work-home-hero__avatar:hover {
+  z-index: 5;
+  box-shadow: 0 6px 20px rgba(45, 45, 45, 0.18);
+}
+
+/* Casual “photos on a desk” pile: strong tilts + overlap */
+.work-home-hero__avatar:nth-child(1) {
+  transform: rotate(-18deg) translate(-0.35rem, 0.2rem);
+  z-index: 1;
+}
+
+.work-home-hero__avatar:nth-child(1):hover {
+  transform: rotate(-23deg) translate(-0.35rem, 0.2rem);
+}
+
+.work-home-hero__avatar:nth-child(2) {
+  margin-left: clamp(-1.1rem, -2.5vw, -0.45rem);
+  transform: rotate(11deg) translate(0, -0.15rem);
+  z-index: 3;
+}
+
+.work-home-hero__avatar:nth-child(2):hover {
+  transform: rotate(16deg) translate(0, -0.15rem);
+}
+
+.work-home-hero__avatar:nth-child(3) {
+  margin-left: clamp(-0.95rem, -2.2vw, -0.35rem);
+  transform: rotate(-9deg) translate(0.25rem, 0.35rem);
+  z-index: 2;
+}
+
+.work-home-hero__avatar:nth-child(3):hover {
+  transform: rotate(-14deg) translate(0.25rem, 0.35rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-home-hero__avatar {
+    transition: none;
+  }
+
+  .work-home-hero__avatar:nth-child(1):hover {
+    transform: rotate(-18deg) translate(-0.35rem, 0.2rem);
+  }
+
+  .work-home-hero__avatar:nth-child(2):hover {
+    transform: rotate(11deg) translate(0, -0.15rem);
+  }
+
+  .work-home-hero__avatar:nth-child(3):hover {
+    transform: rotate(-9deg) translate(0.25rem, 0.35rem);
+  }
 }
 
 .work-home-hero__buyline {

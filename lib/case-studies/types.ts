@@ -7,6 +7,10 @@ export type CaseStudyFeature = {
   name: string;
   description: string;
   media?: CaseStudyMedia[];
+  /** External link (e.g. published article). Shows a prominent CTA on the case study. */
+  href?: string;
+  /** Override default “Read article” when `href` is set. */
+  linkLabel?: string;
 };
 
 export type CaseStudyResult = {
@@ -28,10 +32,11 @@ export type CaseStudy = {
   coverTint?: string;
   /** Work index: optional image on the cover (e.g. logo); shown on tint background */
   coverImage?: CaseStudyMedia;
-  /** Context and challenge (replaces separate problem + goals blocks on the detail page). */
-  problemStatement: string;
-  createdFeatures: CaseStudyFeature[];
-  /** Bottom-row outcomes shown as 2-3 cards. */
-  results: CaseStudyResult[];
+  /** Context and challenge (“What Was Wrong”); omit to hide that section. */
+  problemStatement?: string;
+  /** “What was created”; omit or empty to hide. */
+  createdFeatures?: CaseStudyFeature[];
+  /** “What This Enabled” cards; omit or empty to hide. */
+  results?: CaseStudyResult[];
   order?: number;
 };

@@ -58,6 +58,16 @@ export function WhatWasCreatedSection({ features }: Props): React.JSX.Element {
                 {preventWidow(feature.name)}
               </strong>
               <p className="created-section__feature-desc">{feature.description}</p>
+              {feature.href?.trim() ? (
+                <a
+                  href={feature.href.trim()}
+                  className="created-section__article-cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {feature.linkLabel?.trim() || "Read article"}
+                </a>
+              ) : null}
             </div>
           </li>
         ))}

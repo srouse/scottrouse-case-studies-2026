@@ -1,9 +1,7 @@
 import Link from "next/link";
+import { LinkedinLogoIcon } from "@phosphor-icons/react/ssr";
 
-const contactMailto =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL != null && process.env.NEXT_PUBLIC_CONTACT_EMAIL !== ""
-    ? `mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`
-    : "mailto:hello@example.com";
+import { LINKEDIN_PROFILE_URL } from "./constants";
 
 export function SiteHeader(): React.JSX.Element {
   return (
@@ -12,24 +10,20 @@ export function SiteHeader(): React.JSX.Element {
         <Link href="/work" className="site-header__brand">
           Scott Rouse
         </Link>
-        <nav aria-label="Primary">
-          <ul className="site-header__nav">
-            <li>
-              <Link href="/work" className="site-header__link">
-                work
-              </Link>
-            </li>
-            <li>
-              <a
-                href={contactMailto}
-                className="site-header__link"
-                suppressHydrationWarning
-              >
-                contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <a
+          className="site-header__social-link"
+          href={LINKEDIN_PROFILE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Scott Rouse on LinkedIn"
+        >
+          <LinkedinLogoIcon
+            className="site-header__social-icon"
+            size={28}
+            weight="regular"
+            aria-hidden
+          />
+        </a>
       </div>
     </header>
   );

@@ -9,7 +9,7 @@ export default function ProtectedLayout({
   return (
     <>
       <SiteHeader />
-      <main className="page-shell" style={{ padding: "var(--space-12) var(--page-padding-inline) var(--space-16) var(--page-padding-inline)" }}>
+      <main className="page-shell page-shell--protected-main">
         {children}
       </main>
       <SiteFooter />

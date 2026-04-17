@@ -1,9 +1,12 @@
 /**
  * Site chrome: header + footer (all routes that use SiteHeader / SiteFooter).
  */
+.page-shell--protected-main {
+  padding-bottom: var(--space-16);
+}
+
 .site-header {
   background: var(--color-bg);
-  border-bottom: 1px solid var(--color-border-header);
   padding: var(--space-6) var(--page-padding-inline);
 }
 
@@ -16,7 +19,7 @@
 
 .site-header__brand {
   font-weight: var(--font-weight-bold);
-  font-size: var(--text-brand);
+  font-size: clamp(1.1875rem, 2.25vw, 1.375rem);
   color: var(--color-text-strong);
   text-decoration: none;
 }
@@ -26,31 +29,35 @@
   color: var(--color-text-strong);
 }
 
-.site-header__nav {
-  display: flex;
+.site-header__social-link {
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-6);
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  justify-content: center;
+  padding: var(--space-1);
+  margin: calc(-1 * var(--space-1));
+  line-height: 0;
+  color: var(--color-icon-social);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
 }
 
-.site-header__link {
-  font-weight: var(--font-weight-regular);
-  font-size: var(--text-nav);
-  color: var(--color-text-muted);
-  text-decoration: none;
-  text-transform: lowercase;
+.site-header__social-link:hover {
+  color: var(--color-linkedin);
 }
 
-.site-header__link:hover {
-  color: var(--color-text-strong);
-  text-decoration: none;
+.site-header__social-link:focus-visible {
+  outline: 2px solid var(--color-linkedin);
+  outline-offset: 2px;
+}
+
+.site-header__social-icon {
+  display: block;
+  flex-shrink: 0;
 }
 
 .site-footer {
   border-top: 1px solid var(--color-border-header);
-  margin-top: var(--space-16);
+  margin-top: var(--space-4);
   padding: var(--space-10) 0 var(--space-12);
 }
 
@@ -136,18 +143,24 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-  background: var(--color-text-strong);
-  color: var(--color-bg);
+  padding: var(--space-1);
+  margin: calc(-1 * var(--space-1));
+  line-height: 0;
+  color: var(--color-icon-social);
   text-decoration: none;
+  border-radius: var(--radius-sm);
 }
 
 .site-footer__social-link:hover {
-  opacity: 0.88;
+  color: var(--color-linkedin);
+}
+
+.site-footer__social-link:focus-visible {
+  outline: 2px solid var(--color-linkedin);
+  outline-offset: 2px;
 }
 
 .site-footer__social-icon {
   display: block;
+  flex-shrink: 0;
 }

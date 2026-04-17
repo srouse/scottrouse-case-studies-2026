@@ -1,4 +1,7 @@
-export const IMG_CACHE_URL = 6;
+export const IMG_CACHE_URL = 14;
+
+/** Public LinkedIn profile — header + footer */
+export const LINKEDIN_PROFILE_URL = "https://www.linkedin.com/in/scottfrouse/";
 
 /**
  * next/image `sizes` must use lengths browsers parse reliably. `rem` / `min()` in
