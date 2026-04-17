@@ -10,8 +10,8 @@ const sourceSansPro = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "Private Portfolio",
-  description: "Case-study portfolio"
+  title: "Scott Rouse - Case Studies",
+  description: "Case studies of my work"
 };
 
 export default function RootLayout({
