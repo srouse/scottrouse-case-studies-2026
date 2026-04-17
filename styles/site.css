@@ -9,29 +9,30 @@
   box-sizing: border-box;
 }
 
-.protected-main > .page-shell.page-shell--protected-main {
+.protected-main>.page-shell.page-shell--protected-main {
   padding-top: var(--space-12);
 }
 
-.protected-main > .case-study-article {
+.protected-main>.case-study-article {
   padding-top: var(--space-4);
 }
 
 .site-header {
   background: var(--color-bg);
-  padding: var(--space-6) var(--page-padding-inline);
+  /* Horizontal inset comes only from .page-shell — matches case study hero / main column */
+  padding: var(--space-6) 0;
 }
 
 .site-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-6) 0;
+  padding: var(--space-6) var(--page-padding-inline);
 }
 
 .site-header__brand {
   font-weight: var(--font-weight-bold);
-  font-size: clamp(1.1875rem, 2.25vw, 1.375rem);
+  font-size: clamp(1.25rem, 2.65vw, 1.5rem);
   color: var(--color-text-strong);
   text-decoration: none;
 }
