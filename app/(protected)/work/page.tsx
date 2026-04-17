@@ -6,7 +6,7 @@ export default function WorkPage(): React.JSX.Element {
   const studies = getPublishedCaseStudies();
 
   return (
-    <>
+    <div className="page-shell page-shell--protected-main">
       <WorkHomeHero />
       <section className="work-section" aria-labelledby="case-studies-heading">
         <header className="work-section__head">
@@ -26,6 +26,6 @@ export default function WorkPage(): React.JSX.Element {
           </p>
         )}
       </section>
-    </>
+    </div>
   );
 }

@@ -1,9 +1,25 @@
 /**
  * /work/[slug] — case study article layout + feature media rows.
+ * Hero is full-width inside main (no 100vw breakout); body sections use the same column as .page-shell.
  */
 .case-study-article {
   display: grid;
   gap: var(--space-10);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.case-study-article > *:not(.case-study-hero) {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-padding-inline);
+  padding-right: var(--page-padding-inline);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Problem statement, What was created, Results — not feature titles inside “What was created” */
@@ -27,14 +43,14 @@ h2.case-study-section__heading {
   margin-top: var(--space-4);
 }
 
-/* Full-bleed: break out of centered .page-shell to viewport edges; pad to match shell content column */
+/* Full-width band inside full-width main — padding aligns inner copy with .page-shell column */
 .case-study-hero {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
+  max-width: none;
+  margin: 0;
   box-sizing: border-box;
   padding: var(--space-12)
-    calc(max(0px, (100vw - var(--max-width)) / 2) + var(--page-padding-inline))
+    calc(max(0px, (100% - var(--max-width)) / 2) + var(--page-padding-inline))
     var(--space-12);
   border-radius: 0;
   color: #ffffff;

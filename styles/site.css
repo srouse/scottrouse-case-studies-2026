@@ -1,8 +1,20 @@
 /**
  * Site chrome: header + footer (all routes that use SiteHeader / SiteFooter).
  */
-.page-shell--protected-main {
-  padding-bottom: var(--space-16);
+.protected-main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 0 var(--space-16);
+  box-sizing: border-box;
+}
+
+.protected-main > .page-shell.page-shell--protected-main {
+  padding-top: var(--space-12);
+}
+
+.protected-main > .case-study-article {
+  padding-top: var(--space-4);
 }
 
 .site-header {

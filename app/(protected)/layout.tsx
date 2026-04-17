@@ -9,9 +9,7 @@ export default function ProtectedLayout({
   return (
     <>
       <SiteHeader />
-      <main className="page-shell page-shell--protected-main">
-        {children}
-      </main>
+      <main className="protected-main">{children}</main>
       <SiteFooter />
     </>
   );
