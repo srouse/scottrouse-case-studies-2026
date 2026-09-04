@@ -13,7 +13,7 @@ export async function loginAction(formData: FormData): Promise<void> {
   const nextPath = safeNextPath(String(formData.get("next") ?? "/work"));
 
   if (!verifyPassword(password)) {
-    redirect(`/login?error=1&next=${encodeURIComponent(nextPath)}`);
+    redirect(`/?error=1&next=${encodeURIComponent(nextPath)}`);
   }
 
   await establishSessionCookie();

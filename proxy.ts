@@ -33,15 +33,15 @@ export function proxy(request: NextRequest): NextResponse {
       return response;
     }
 
-    const loginUrl = new URL("/login", request.url);
-    loginUrl.searchParams.set("error", "1");
-    loginUrl.searchParams.set("next", pathname);
-    return NextResponse.redirect(loginUrl);
+    const homeUrl = new URL("/", request.url);
+    homeUrl.searchParams.set("error", "1");
+    homeUrl.searchParams.set("next", pathname);
+    return NextResponse.redirect(homeUrl);
   }
 
-  const loginUrl = new URL("/login", request.url);
-  loginUrl.searchParams.set("next", pathname);
-  return NextResponse.redirect(loginUrl);
+  const homeUrl = new URL("/", request.url);
+  homeUrl.searchParams.set("next", pathname);
+  return NextResponse.redirect(homeUrl);
 }
 
 export const config = {

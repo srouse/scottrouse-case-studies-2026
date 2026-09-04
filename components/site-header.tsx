@@ -7,7 +7,7 @@ export function SiteHeader(): React.JSX.Element {
   return (
     <header className="site-header">
       <div className="page-shell site-header__inner">
-        <Link href="/work" className="site-header__brand">
+        <Link href="/" className="site-header__brand">
           Scott Rouse
         </Link>
         <a

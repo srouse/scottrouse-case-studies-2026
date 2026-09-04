@@ -19,10 +19,10 @@ export function GET(request: NextRequest): NextResponse {
   const next = safeNextPath(request.nextUrl.searchParams.get("next") ?? "/work");
 
   if (code === null || !verifyPassword(code)) {
-    const loginUrl = new URL("/login", request.url);
-    loginUrl.searchParams.set("error", "1");
-    loginUrl.searchParams.set("next", next);
-    return NextResponse.redirect(loginUrl);
+    const homeUrl = new URL("/", request.url);
+    homeUrl.searchParams.set("error", "1");
+    homeUrl.searchParams.set("next", next);
+    return NextResponse.redirect(homeUrl);
   }
 
   const response = NextResponse.redirect(new URL(next, request.url));

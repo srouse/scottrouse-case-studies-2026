@@ -1,50 +1,63 @@
 /**
- * /login — password gate form.
+ * Public landing — portfolio access form under the intro hero.
+ * Shared field/button styles used by the access form.
  */
-.login-page {
-  min-height: 100dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-8) var(--page-padding-inline);
-  box-sizing: border-box;
+
+.page-shell:has(.portfolio-access) .work-home-hero {
+  padding-bottom: var(--space-10);
 }
 
-.login-page__panel {
+.portfolio-access {
   width: 100%;
   max-width: 22rem;
-  margin-inline: auto;
+  margin: 0 auto var(--space-16);
   text-align: center;
 }
 
-h1.login-page__title {
+.portfolio-access__toggle {
+  appearance: none;
   margin: 0;
-  font-size: clamp(1.2rem, 2.8vw, 1.45rem);
-  font-weight: var(--font-weight-bold);
+  padding: 0.5rem 1rem;
+  /* Border must meet WCAG 1.4.11 (≥3:1 vs white); #e8e8e8 does not. */
+  border: 1px solid var(--color-text-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--color-text-strong);
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.portfolio-access__toggle:hover {
+  background: var(--color-card);
+}
+
+.portfolio-access__toggle:focus-visible {
+  outline: 2px solid var(--color-text-strong);
+  outline-offset: 2px;
+}
+
+.portfolio-access__panel {
+  text-align: center;
+}
+
+h2.portfolio-access__title {
+  margin: 0;
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  font-weight: var(--font-weight-medium);
   line-height: var(--leading-snug);
   color: var(--color-text-strong);
   letter-spacing: var(--tracking-tight);
 }
 
-.login-page__lede {
-  margin: var(--space-3) 0 0;
-  font-size: var(--text-body);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-muted);
-}
-
-.login-page__form {
+.portfolio-access__form {
   margin-top: var(--space-6);
   display: grid;
   gap: var(--space-4);
   text-align: left;
-}
-
-.login-page__form label {
-  display: block;
-  font-size: var(--text-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text-strong);
 }
 
 .input-field {
