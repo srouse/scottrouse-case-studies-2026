@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/lib/case-studies/types";
 export const contentfulAiDemos = {
   slug: "ctf-ai-demos",
   companyName: "Contentful",
-  projectTitle: "AI-Driven Technical Demo Generation",
+  projectTitle: "AI Demos",
   summary:
     "Built an AI-native system that generates realistic, prospect-specific technical demos, reducing manual setup time while improving quality and sales effectiveness.",
   published: true,
@@ -13,6 +13,7 @@ export const contentfulAiDemos = {
     src: "/contentful/contentful-logo.png",
     alt: ""
   },
+  order: 2,
   problemStatement: `Contentful’s sales engineers depended on technical demos to close deals, but creating them was slow, manual, and inconsistent. High-impact demos took hours or days to approximate a prospect’s environment and still fell short of accurately reflecting real systems. This limited the ability to tell compelling, credible stories at critical sales moments. The cost was immediate: time spent building demos reduced customer engagement, while competitors moved toward AI-assisted approaches. Without change, Contentful risked falling behind in a core driver of revenue.`,
   createdFeatures: [
     {
@@ -83,6 +84,5 @@ export const contentfulAiDemos = {
       description:
         "Accelerated internal AI adoption, driving broader experimentation and influencing company-wide direction.",
     },
-  ],
-  order: 4,
+  ]
 } satisfies CaseStudy;

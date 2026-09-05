@@ -5,7 +5,7 @@ import "./globals.css";
 
 const sourceSansPro = Source_Sans_3({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["200", "400", "600", "700"],
   display: "swap"
 });
 

@@ -1,0 +1,35 @@
+.section {
+  display: grid;
+  gap: var(--space-10);
+  padding-top: var(--space-2);
+}
+
+.head {
+  display: grid;
+  gap: var(--space-6);
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--text-page-title);
+}
+
+h2.title {
+  font-size: var(--text-page-title);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-16);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* Wider gutters than page inset so tiles read smaller with more air between */
+    gap: var(--space-16) var(--space-16);
+  }
+}

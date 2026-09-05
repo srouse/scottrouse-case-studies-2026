@@ -1,5 +1,7 @@
 import { preventWidow } from "@/lib/text/prevent-widow";
 
+import shared from "../section-shared.module.css";
+
 type Props = { text: string };
 
 export function ProblemStatementSection({ text }: Props): React.JSX.Element {
@@ -7,16 +9,14 @@ export function ProblemStatementSection({ text }: Props): React.JSX.Element {
 
   return (
     <section className="card stack" aria-labelledby="problem-statement-heading">
-      <h2 id="problem-statement-heading" className="case-study-section__heading">
+      <h2 id="problem-statement-heading" className={shared.heading}>
         {preventWidow("What Was Wrong")}
       </h2>
       {parts.map((paragraph, i) => (
         <p
           key={i}
           className={
-            i === 0
-              ? "case-study-section__prose"
-              : "case-study-section__prose case-study-section__prose--follow"
+            i === 0 ? shared.prose : `${shared.prose} ${shared.proseFollow}`
           }
         >
           {paragraph}

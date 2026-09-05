@@ -1,0 +1,18 @@
+/**
+ * App shell layout shared by public landing + protected routes.
+ */
+.protectedMain {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 0 var(--space-16);
+  box-sizing: border-box;
+}
+
+.protectedMain > :global(.page-shell.page-shell--protected-main) {
+  padding-top: var(--space-12);
+}
+
+.protectedMain > :global([data-case-study-article]) {
+  padding-top: var(--space-4);
+}

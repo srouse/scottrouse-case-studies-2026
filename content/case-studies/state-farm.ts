@@ -3,7 +3,7 @@ import type { CaseStudy } from "@/lib/case-studies/types";
 export const stateFarm = {
   slug: "state-farm",
   companyName: "State Farm",
-  projectTitle: "Rebuilding a Design System for Scale",
+  projectTitle: "Design System Remake",
   summary:
     "Transformed a fragmented, unused design system into a scalable foundation using tokens, web components, and cross-team workflows that enabled adoption across a highly diverse engineering organization.",
   published: true,
@@ -13,6 +13,7 @@ export const stateFarm = {
     src: "/statefarm/state-farm-logo.png",
     alt: ""
   },
+  order: 3,
   problemStatement: `
   State Farm’s digital experience was deeply fragmented. Teams across the organization used different frameworks, making a single implementation approach impractical, while the existing design system relied on copy-paste HTML templates and brittle CSS that were difficult to update and rarely adopted.
   
@@ -95,6 +96,5 @@ Enabled developers to adopt flexible component patterns while helping designers 
       description:
         "Enabled rapid updates to tokens and components that previously took months, improving responsiveness to design changes.",
     },
-  ],
-  order: 1,
+  ]
 } satisfies CaseStudy;

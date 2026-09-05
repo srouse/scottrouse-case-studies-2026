@@ -1,32 +1,35 @@
 import Image from "next/image";
 
-import type { CaseStudyFeature } from "@/lib/case-studies/types";
-import { preventWidow } from "@/lib/text/prevent-widow";
 import {
   IMAGE_QUALITY_SHARP,
   IMG_CACHE_URL,
   SIZES_CONTENT_COLUMN
-} from "../constants";
+} from "@/components/constants";
+import type { CaseStudyFeature } from "@/lib/case-studies/types";
+import { preventWidow } from "@/lib/text/prevent-widow";
+
+import shared from "../section-shared.module.css";
+import styles from "./what-was-created-section.module.css";
 
 type Props = { features: CaseStudyFeature[] };
 
 export function WhatWasCreatedSection({ features }: Props): React.JSX.Element {
   return (
-    <section className="card created-section stack" aria-labelledby="created-heading">
-      <h2
-        id="created-heading"
-        className="case-study-section__heading created-section__heading"
-      >
+    <section
+      className={`card stack ${styles.root}`}
+      aria-labelledby="created-heading"
+    >
+      <h2 id="created-heading" className={`${shared.heading} ${styles.heading}`}>
         {preventWidow("What was created")}
       </h2>
-      <ul className="created-section__features">
+      <ul className={styles.features}>
         {features.map((feature, featureIndex) => (
           <li
             key={`${feature.name}-${featureIndex}`}
-            className="created-section__block"
+            className={styles.block}
           >
             {feature.media && feature.media.length > 0 ? (
-              <div className="created-section__bleed">
+              <div className={styles.bleed}>
                 {feature.media.map((item, mediaIndex) => {
                   const isFirstCreatedImage =
                     features
@@ -36,14 +39,14 @@ export function WhatWasCreatedSection({ features }: Props): React.JSX.Element {
                   return (
                     <figure
                       key={`${item.src}-${mediaIndex}`}
-                      className="created-section__figure"
+                      className={styles.figure}
                     >
                       <Image
                         src={`${item.src}?v=${IMG_CACHE_URL}`}
                         alt={item.alt}
                         width={2400}
                         height={1350}
-                        className="created-section__image"
+                        className={styles.image}
                         sizes={SIZES_CONTENT_COLUMN}
                         quality={IMAGE_QUALITY_SHARP}
                         priority={isFirstCreatedImage}
@@ -53,15 +56,15 @@ export function WhatWasCreatedSection({ features }: Props): React.JSX.Element {
                 })}
               </div>
             ) : null}
-            <div className="created-section__copy">
-              <strong className="created-section__feature-name">
+            <div className={styles.copy}>
+              <strong className={styles.featureName}>
                 {preventWidow(feature.name)}
               </strong>
-              <p className="created-section__feature-desc">{feature.description}</p>
+              <p className={styles.featureDesc}>{feature.description}</p>
               {feature.href?.trim() ? (
                 <a
                   href={feature.href.trim()}
-                  className="created-section__article-cta"
+                  className={styles.articleCta}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

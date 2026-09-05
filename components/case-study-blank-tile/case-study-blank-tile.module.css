@@ -1,0 +1,100 @@
+.root {
+  display: block;
+}
+
+.frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  cursor: url("/cursors/moon.png") 8 8, default;
+}
+
+.mark {
+  position: relative;
+  width: 40%;
+  aspect-ratio: 958 / 876;
+}
+
+.markImg {
+  object-fit: contain;
+  opacity: 0.5;
+}
+
+.frame:hover .markImg {
+  animation: markBreathe 2.6s ease-in-out infinite;
+}
+
+@keyframes markBreathe {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.78;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame:hover .markImg {
+    animation: none;
+  }
+}
+
+/* Type skeletons — margins/heights mirror case-study-card */
+.skeletonCategory {
+  margin: var(--space-4) 0 0;
+  width: 42%;
+  height: calc(var(--text-xs) * var(--leading-snug));
+  border-radius: var(--radius-sm);
+  background: var(--color-skeleton);
+}
+
+.skeletonHeadlines {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.skeletonCompany {
+  margin: var(--space-3) 0 0;
+  width: 34%;
+  height: calc(var(--text-body) * var(--leading-snug));
+  border-radius: var(--radius-sm);
+  background: var(--color-skeleton);
+}
+
+.skeletonProject {
+  margin: var(--space-1) 0 0;
+  width: 72%;
+  height: calc(var(--text-case-tile-title) * var(--leading-tight) * 0.85);
+  border-radius: var(--radius-sm);
+  background: var(--color-skeleton);
+}
+
+.skeletonSummary {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-4) 0 0;
+}
+
+.skeletonSummaryLine {
+  height: calc(var(--text-body) * var(--leading-relaxed) * 0.55);
+  border-radius: var(--radius-sm);
+  background: var(--color-skeleton);
+}
+
+.skeletonSummaryLine:first-child {
+  width: 100%;
+}
+
+.skeletonSummaryLine:last-child {
+  width: 78%;
+}

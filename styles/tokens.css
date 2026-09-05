@@ -16,6 +16,8 @@
   --color-linkedin: #0a66c2;
   --color-border: #e8e8e8;
   --color-border-header: #eeeeee;
+  /** Placeholder bars on empty work tiles */
+  --color-skeleton: #f2f2f2ef;
   --color-error: #a50000;
   --color-avatar-border: #ffffff;
 
@@ -33,6 +35,7 @@
   --space-32: 8rem;
 
   /* ——— Radius ——— */
+  --radius-xs: 0.125rem;
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-card: 0.875rem;
@@ -50,6 +53,7 @@
   --shadow-avatar: 0 4px 16px rgba(0, 0, 0, 0.12);
 
   /* ——— Font weights ——— */
+  --font-weight-thin: 200;
   --font-weight-regular: 400;
   --font-weight-medium: 600;
   --font-weight-bold: 700;
@@ -94,8 +98,8 @@
   --type-label-weight: var(--font-weight-medium);
   --type-label-color: var(--color-text-strong);
 
-  --type-category: var(--text-2xs);
-  --type-category-weight: var(--font-weight-bold);
+  --type-category: var(--text-xs);
+  --type-category-weight: var(--font-weight-thin);
   --type-category-transform: uppercase;
 
   --type-eyebrow: var(--text-sm);

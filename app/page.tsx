@@ -12,6 +12,9 @@ import {
   verifySessionToken
 } from "@/lib/auth/session";
 
+import layoutStyles from "@/styles/layout.module.css";
+import styles from "./page.module.css";
+
 type HomePageProps = {
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 };
@@ -41,9 +44,9 @@ export default async function HomePage({
   return (
     <>
       <SiteHeader />
-      <main className="protected-main">
+      <main className={layoutStyles.protectedMain}>
         <div className="page-shell page-shell--protected-main">
-          <WorkHomeHero />
+          <WorkHomeHero className={styles.heroWithAccess} />
           <PortfolioAccessForm nextPath={next} hasError={hasError} />
         </div>
       </main>

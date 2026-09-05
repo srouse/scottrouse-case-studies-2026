@@ -24,6 +24,18 @@ export function validatePublishedCaseStudy(caseStudy: CaseStudy): void {
     }
   }
 
+  if (caseStudy.ctaHref !== undefined) {
+    const href = caseStudy.ctaHref.trim();
+    if (!href || !isValidHttpUrl(href)) {
+      throw new Error(
+        `Published case study "${caseStudy.slug}" has invalid ctaHref (use https://...)`
+      );
+    }
+    if (caseStudy.ctaLabel !== undefined && !caseStudy.ctaLabel.trim()) {
+      throw new Error(`Published case study "${caseStudy.slug}" has empty ctaLabel`);
+    }
+  }
+
   if (caseStudy.problemStatement !== undefined && !caseStudy.problemStatement.trim()) {
     throw new Error(`Published case study "${caseStudy.slug}" has empty problemStatement`);
   }

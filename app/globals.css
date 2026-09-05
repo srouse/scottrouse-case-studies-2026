@@ -1,6 +1,6 @@
+/**
+ * Global design tokens + base element styles only.
+ * Component styles: import `*.module.css` next to the component; do not add page dumps here.
+ */
 @import "../styles/tokens.css";
 @import "../styles/base.css";
-@import "../styles/site.css";
-@import "../styles/pages/work-index.css";
-@import "../styles/pages/case-study-detail.css";
-@import "../styles/pages/login.css";

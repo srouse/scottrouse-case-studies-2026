@@ -8,6 +8,8 @@ import {
 } from "@/components/case-study-sections";
 import { getCaseStudyBySlug } from "@/lib/case-studies";
 
+import styles from "./case-study-page.module.css";
+
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -22,7 +24,7 @@ export default async function CaseStudyPage({ params }: PageProps): Promise<Reac
   const results = study.results ?? [];
 
   return (
-    <article className="case-study-article">
+    <article className={styles.article} data-case-study-article>
       <CaseStudyHero study={study} />
       {problem ? <ProblemStatementSection text={problem} /> : null}
       {features.length > 0 ? <WhatWasCreatedSection features={features} /> : null}

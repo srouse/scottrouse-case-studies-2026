@@ -24,6 +24,7 @@ export type CaseStudy = {
   companyName: string;
   /** Project or initiative headline (primary title on tiles and detail hero). */
   projectTitle: string;
+  /** Short description for index tiles and the case study hero. Supports `**bold**`. */
   summary: string;
   published: boolean;
   /** Work index: all-caps category line (e.g. CLINICAL WORKFLOW) */
@@ -32,6 +33,16 @@ export type CaseStudy = {
   coverTint?: string;
   /** Work index: optional image on the cover (e.g. logo); shown on tint background */
   coverImage?: CaseStudyMedia;
+  /**
+   * How the cover image fills the tile.
+   * - contain (default): logo on brand tint
+   * - cover: full-bleed art (avoids tint fringing on white/light images)
+   */
+  coverFit?: "contain" | "cover";
+  /** Optional hero CTA (external). */
+  ctaHref?: string;
+  /** Label for `ctaHref`. Defaults to “View”. */
+  ctaLabel?: string;
   /** Context and challenge (“What Was Wrong”); omit to hide that section. */
   problemStatement?: string;
   /** “What was created”; omit or empty to hide. */

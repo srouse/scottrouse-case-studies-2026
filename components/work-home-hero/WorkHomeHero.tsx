@@ -1,24 +1,33 @@
 import Image from "next/image";
-import { IMG_CACHE_URL } from "./constants";
+
+import { IMG_CACHE_URL } from "@/components/constants";
+
+import styles from "./work-home-hero.module.css";
 
 const BUYLINE =
-  "I design and build systems that connect content, components, and AI into something teams love to use.";
+  "I build systems that connect content, components, and AI into something teams love to use.";
 
-export function WorkHomeHero(): React.JSX.Element {
+type WorkHomeHeroProps = {
+  className?: string;
+};
+
+export function WorkHomeHero({ className }: WorkHomeHeroProps): React.JSX.Element {
+  const rootClass = className ? `${styles.root} ${className}` : styles.root;
+
   return (
-    <section className="work-home-hero" aria-label="Introduction">
-      <h1 className="work-home-hero__title">
+    <section className={rootClass} aria-label="Introduction">
+      <h1 className={styles.title}>
         <span>Hi. I&apos;m Scott.</span>
       </h1>
-      <p className="work-home-hero__buyline">{BUYLINE}</p>
-      <span className="work-home-hero__avatar-wrap">
+      <p className={styles.buyline}>{BUYLINE}</p>
+      <span className={styles.avatarWrap}>
         <Image
           src={`/profile/srouse-profile.png?v=${IMG_CACHE_URL}`}
           alt=""
           width={64}
           height={64}
           sizes="64px"
-          className="work-home-hero__avatar"
+          className={styles.avatar}
           priority
         />
         <Image
@@ -27,7 +36,7 @@ export function WorkHomeHero(): React.JSX.Element {
           width={64}
           height={64}
           sizes="64px"
-          className="work-home-hero__avatar"
+          className={styles.avatar}
           priority
         />
         <Image
@@ -36,7 +45,7 @@ export function WorkHomeHero(): React.JSX.Element {
           width={64}
           height={64}
           sizes="64px"
-          className="work-home-hero__avatar"
+          className={styles.avatar}
           priority
         />
       </span>

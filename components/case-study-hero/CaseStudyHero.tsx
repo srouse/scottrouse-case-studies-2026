@@ -1,12 +1,15 @@
 import Image from "next/image";
 
-import type { CaseStudy } from "@/lib/case-studies/types";
-import { preventWidow } from "@/lib/text/prevent-widow";
+import { InlineEmphasis } from "@/components/inline-emphasis";
 import {
   IMAGE_QUALITY_SHARP,
   IMG_CACHE_URL,
   SIZES_HERO_LOGO
-} from "./constants";
+} from "@/components/constants";
+import type { CaseStudy } from "@/lib/case-studies/types";
+import { preventWidow } from "@/lib/text/prevent-widow";
+
+import styles from "./case-study-hero.module.css";
 
 type CaseStudyHeroProps = {
   study: CaseStudy;
@@ -39,38 +42,45 @@ export function CaseStudyHero({ study }: CaseStudyHeroProps): React.JSX.Element 
   const category = study.category ?? "CASE STUDY";
   const cover = study.coverImage;
   const lightBg = isLightBackground(tint);
+  const ctaHref = study.ctaHref?.trim();
 
   return (
     <header
-      className={`case-study-hero${lightBg ? " case-study-hero--light-bg" : ""}`}
+      data-case-study-hero
+      className={lightBg ? `${styles.root} ${styles.lightBg}` : styles.root}
       style={{ backgroundColor: tint }}
     >
-      <div className="case-study-hero__inner">
+      <div className={styles.inner}>
         {cover ? (
-          <div className="case-study-hero__media">
+          <div className={styles.media}>
             <Image
               src={`${cover.src}?v=${IMG_CACHE_URL}`}
               alt={cover.alt}
               width={800}
               height={400}
-              className="case-study-hero__img"
+              className={styles.img}
               priority
               sizes={SIZES_HERO_LOGO}
               quality={IMAGE_QUALITY_SHARP}
             />
           </div>
         ) : null}
-        <p className="case-study-hero__eyebrow">
-          <span className="case-study-hero__eyebrow-label">Case study</span>
-          <span className="case-study-hero__eyebrow-sep" aria-hidden>
-            {" "}
-            ·{" "}
-          </span>
-          <span className="case-study-hero__category">{category}</span>
+        <p className={styles.eyebrow}>{category}</p>
+        <p className={styles.company}>{preventWidow(study.companyName)}</p>
+        <h1 className={styles.project}>{preventWidow(study.projectTitle)}</h1>
+        <p className={styles.summary}>
+          <InlineEmphasis text={study.summary} />
         </p>
-        <p className="case-study-hero__company">{preventWidow(study.companyName)}</p>
-        <h1 className="case-study-hero__project">{preventWidow(study.projectTitle)}</h1>
-        <p className="case-study-hero__summary">{study.summary}</p>
+        {ctaHref ? (
+          <a
+            href={ctaHref}
+            className={styles.cta}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {study.ctaLabel?.trim() || "View"}
+          </a>
+        ) : null}
       </div>
     </header>
   );

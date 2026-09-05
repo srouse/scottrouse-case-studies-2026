@@ -3,17 +3,17 @@ import type { CaseStudy } from "@/lib/case-studies/types";
 export const summitCreditUnion = {
   slug: "summit-credit-union",
   companyName: "Summit Credit Union",
-  projectTitle: "Design System & Content Platform Transformation",
+  projectTitle: "Design System & Website Redesign",
   summary:
     "Led the creation of a web component–driven design system and content platform that unified fragmented systems, reduced reliance on client-side complexity, and enabled Summit to regain control over their member experience while avoiding a costly full rebuild.",
   published: true,
   category: "FINANCIAL SERVICES",
-  coverTint: "#4D8406",
+  coverTint: "#21292D",
   coverImage: {
     src: "/summit/summit-logo.png",
     alt: "Summit central"
   },
-
+  order: 5,
   problemStatement:
     "Summit Credit Union’s digital experience was fragmented across third-party systems, leaving them with little control over how users interacted with products. Even small improvements were difficult to implement. Developers spent most of their time wrestling with UI complexity rather than delivering value, compounded by limited client-side expertise. At the same time, Drupal 7 was reaching end-of-life, forcing a major rebuild. Without intervention, Summit risked falling further behind competitors and continuing a cycle of costly, fragmented reinvention.",
 
@@ -91,7 +91,5 @@ export const summitCreditUnion = {
       description:
         "The new architecture improved performance, reduced technical and design debt, and enabled Summit to move off Drupal 7 to a modern CMS stack. Reusable components and structured content created a more scalable foundation for future growth."
     }
-  ],
-
-  order: 3
+  ]
 } satisfies CaseStudy;

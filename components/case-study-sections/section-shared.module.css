@@ -1,0 +1,21 @@
+.heading {
+  margin: 0;
+  font-size: var(--text-page-title);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-snug);
+  color: var(--color-text-strong);
+  text-align: center;
+}
+
+.prose {
+  margin: 0 auto;
+  max-width: 40rem;
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  color: var(--type-body-color);
+  text-align: center;
+}
+
+.proseFollow {
+  margin-top: var(--space-4);
+}

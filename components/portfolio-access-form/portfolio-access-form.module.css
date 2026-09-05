@@ -1,25 +1,31 @@
-/**
- * Public landing — portfolio access form under the intro hero.
- * Shared field/button styles used by the access form.
- */
-
-.page-shell:has(.portfolio-access) .work-home-hero {
-  padding-bottom: var(--space-10);
-}
-
-.portfolio-access {
+.root {
   width: 100%;
-  max-width: 22rem;
+  max-width: 28rem;
   margin: 0 auto var(--space-16);
   text-align: center;
 }
 
-.portfolio-access__toggle {
+.closed {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+}
+
+.hint {
+  margin: 0;
+  max-width: 28rem;
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+
+.toggle {
   appearance: none;
   margin: 0;
   padding: 0.5rem 1rem;
   /* Border must meet WCAG 1.4.11 (≥3:1 vs white); #e8e8e8 does not. */
-  border: 1px solid var(--color-text-strong);
+  border: none;
   border-radius: var(--radius-md);
   background: var(--color-surface);
   font: inherit;
@@ -31,20 +37,23 @@
   cursor: pointer;
 }
 
-.portfolio-access__toggle:hover {
+.toggle:hover {
   background: var(--color-card);
 }
 
-.portfolio-access__toggle:focus-visible {
+.toggle:focus-visible {
   outline: 2px solid var(--color-text-strong);
   outline-offset: 2px;
 }
 
-.portfolio-access__panel {
+.panel {
   text-align: center;
+  width: 100%;
+  max-width: 18rem;
+  margin-inline: auto;
 }
 
-h2.portfolio-access__title {
+.title {
   margin: 0;
   font-size: clamp(1.05rem, 2.2vw, 1.2rem);
   font-weight: var(--font-weight-medium);
@@ -53,14 +62,14 @@ h2.portfolio-access__title {
   letter-spacing: var(--tracking-tight);
 }
 
-.portfolio-access__form {
+.form {
   margin-top: var(--space-6);
   display: grid;
   gap: var(--space-4);
   text-align: left;
 }
 
-.input-field {
+.input {
   width: 100%;
   padding: 0.625rem 0.75rem;
   border-radius: var(--radius-md);
@@ -71,12 +80,12 @@ h2.portfolio-access__title {
   font-size: var(--text-body);
 }
 
-.input-field:focus-visible {
+.input:focus-visible {
   outline: 2px solid var(--color-text-strong);
   outline-offset: 2px;
 }
 
-.btn-primary {
+.submit {
   width: 100%;
   padding: 0.625rem 1rem;
   border-radius: var(--radius-md);
@@ -89,16 +98,16 @@ h2.portfolio-access__title {
   cursor: pointer;
 }
 
-.btn-primary:hover {
+.submit:hover {
   opacity: 0.92;
 }
 
-.btn-primary:focus-visible {
+.submit:focus-visible {
   outline: 2px solid var(--color-text-strong);
   outline-offset: 2px;
 }
 
-.alert-error {
+.error {
   margin: var(--space-4) 0 0;
   font-size: var(--text-sm);
   line-height: var(--leading-relaxed);

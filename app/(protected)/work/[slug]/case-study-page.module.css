@@ -1,0 +1,19 @@
+.article {
+  display: grid;
+  gap: var(--space-10);
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.article > *:not([data-case-study-hero]) {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-padding-inline);
+  padding-right: var(--page-padding-inline);
+  width: 100%;
+  box-sizing: border-box;
+}

@@ -1,6 +1,8 @@
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 
+import layoutStyles from "@/styles/layout.module.css";
+
 export default function ProtectedLayout({
   children
 }: {
@@ -9,7 +11,7 @@ export default function ProtectedLayout({
   return (
     <>
       <SiteHeader />
-      <main className="protected-main">{children}</main>
+      <main className={layoutStyles.protectedMain}>{children}</main>
       <SiteFooter />
     </>
   );

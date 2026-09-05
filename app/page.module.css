@@ -1,0 +1,7 @@
+/**
+ * Landing-only: tighter hero when portfolio access sits below.
+ * Component styles: import `*.module.css` next to the component; do not add to styles/pages.
+ */
+.heroWithAccess {
+  padding-bottom: var(--space-10);
+}

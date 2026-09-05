@@ -1,26 +1,29 @@
 import { LinkedinLogoIcon } from "@phosphor-icons/react/ssr";
 
-import { LINKEDIN_PROFILE_URL } from "./constants";
+import { LINKEDIN_PROFILE_URL } from "@/components/constants";
+
+import styles from "./site-footer.module.css";
 
 export function SiteFooter(): React.JSX.Element {
   return (
-    <footer className="site-footer">
-      <div className="page-shell site-footer__inner">
-        <div className="site-footer__intro">
-          <p className="site-footer__name">Scott Rouse</p>
-          <p className="site-footer__bio">
-            A designer and developer dedicated to building and educating on all things design system,{" "}
+    <footer className={styles.root}>
+      <div className={`page-shell ${styles.inner}`}>
+        <div>
+          <p className={styles.name}>Scott Rouse</p>
+          <p className={styles.bio}>
+            Connecting content, components, and AI into systems teams actually
+            want to use, across{" "}
             <a
-              className="site-footer__inline-link"
+              className={styles.inlineLink}
               href="https://www.figma.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               Figma
-            </a>
-            , and{" "}
+            </a>{" "}
+            and{" "}
             <a
-              className="site-footer__inline-link"
+              className={styles.inlineLink}
               href="https://www.contentful.com/"
               target="_blank"
               rel="noopener noreferrer"
@@ -30,21 +33,21 @@ export function SiteFooter(): React.JSX.Element {
             .
           </p>
         </div>
-        <div className="site-footer__aside">
-          <p className="site-footer__location">
+        <div className={styles.aside}>
+          <p className={styles.location}>
             Located in <strong>Madison, Wisconsin</strong>
           </p>
-          <ul className="site-footer__social" aria-label="Social">
+          <ul className={styles.social} aria-label="Social">
             <li>
               <a
-                className="site-footer__social-link"
+                className={styles.socialLink}
                 href={LINKEDIN_PROFILE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Scott Rouse on LinkedIn"
               >
                 <LinkedinLogoIcon
-                  className="site-footer__social-icon"
+                  className={styles.socialIcon}
                   size={28}
                   weight="regular"
                   aria-hidden

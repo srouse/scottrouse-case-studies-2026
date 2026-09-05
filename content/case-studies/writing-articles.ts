@@ -3,14 +3,15 @@ import type { CaseStudy } from "@/lib/case-studies/types";
 /** Replace `example.com` hrefs with your live article and demo URLs. */
 export const writingArticles = {
   slug: "writing-articles",
-  companyName: "Articles",
-  projectTitle: "Design tokens & AI",
+  companyName: "Contentful",
+  projectTitle: "Articles",
   coverImage: {
     src: "/articles/articles-logo.png",
     alt: ""
   },
+  order: 4,
   summary:
-    "Two long-form pieces: one on design tokens, and another that explains artificial intelligence in plain language for a broad audience.",
+    "A design-tokens article that stayed among Contentful’s **top ten for years**, plus a second piece that explains artificial intelligence in plain language for a broad audience.",
   published: true,
   category: "ARTICLES",
   coverTint: "#1870E6",
@@ -18,7 +19,7 @@ export const writingArticles = {
     {
       name: "Design tokens article",
       description:
-        "Outlined a practical model for design tokens as a system of record for design decisions, progressing from primitive to semantic layers and showing how they scale across design, code, and content platforms. The article has remained a top-performing piece for over a year and a half, at times ranking #1, and has driven direct engagement from partners and customers.",
+        "Outlined a practical model for design tokens as a system of record for design decisions, progressing from primitive to semantic layers and showing how they scale across design, code, and content platforms. The article has remained a top-performing piece for over two years, at times ranking #1, and has driven direct engagement from partners and customers.",
       href: "https://www.contentful.com/blog/design-token-system/",
       media: [
         {
@@ -52,6 +53,5 @@ export const writingArticles = {
         }
       ]
     }
-  ],
-  order: 2
+  ]
 } satisfies CaseStudy;
