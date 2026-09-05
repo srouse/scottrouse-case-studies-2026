@@ -26,28 +26,6 @@
   opacity: 0.5;
 }
 
-.frame:hover .markImg {
-  animation: markBreathe 2.6s ease-in-out infinite;
-}
-
-@keyframes markBreathe {
-
-  0%,
-  100% {
-    opacity: 0.5;
-  }
-
-  50% {
-    opacity: 0.78;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .frame:hover .markImg {
-    animation: none;
-  }
-}
-
 /* Type skeletons — margins/heights mirror case-study-card */
 .skeletonCategory {
   margin: var(--space-4) 0 0;
