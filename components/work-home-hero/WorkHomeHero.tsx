@@ -28,7 +28,6 @@ export function WorkHomeHero({ className }: WorkHomeHeroProps): React.JSX.Elemen
           height={64}
           sizes="64px"
           className={styles.avatar}
-          priority
         />
         <Image
           src={`/profile/profile_pic.jpg?v=${IMG_CACHE_URL}`}
@@ -37,7 +36,6 @@ export function WorkHomeHero({ className }: WorkHomeHeroProps): React.JSX.Elemen
           height={64}
           sizes="64px"
           className={styles.avatar}
-          priority
         />
         <Image
           src={`/profile/srouse-purple.png?v=${IMG_CACHE_URL}`}
@@ -46,7 +44,6 @@ export function WorkHomeHero({ className }: WorkHomeHeroProps): React.JSX.Elemen
           height={64}
           sizes="64px"
           className={styles.avatar}
-          priority
         />
       </span>
     </section>

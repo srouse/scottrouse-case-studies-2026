@@ -14,9 +14,14 @@ import styles from "./case-study-card.module.css";
 
 type CaseStudyCardProps = {
   study: CaseStudy;
+  /** Above-the-fold covers — sets fetchpriority=high and disables lazy load. */
+  priority?: boolean;
 };
 
-export function CaseStudyCard({ study }: CaseStudyCardProps): React.JSX.Element {
+export function CaseStudyCard({
+  study,
+  priority = false
+}: CaseStudyCardProps): React.JSX.Element {
   const category = study.category ?? "CASE STUDY";
   const tint = study.coverTint ?? "#e7e5e4";
   const cover = study.coverImage;
@@ -37,6 +42,7 @@ export function CaseStudyCard({ study }: CaseStudyCardProps): React.JSX.Element 
             className={styles.coverImg}
             sizes={SIZES_CASE_STUDY_TILE}
             quality={IMAGE_QUALITY_SHARP}
+            priority={priority}
           />
         ) : null}
       </div>

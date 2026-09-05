@@ -14,8 +14,12 @@ export default function WorkPage(): React.JSX.Element {
       <section className={styles.section} aria-labelledby="case-studies-heading">
         {studies.length ? (
           <div className={styles.grid}>
-            {studies.map((study) => (
-              <CaseStudyCard key={study.slug} study={study} />
+            {studies.map((study, index) => (
+              <CaseStudyCard
+                key={study.slug}
+                study={study}
+                priority={index < 2}
+              />
             ))}
             <CaseStudyBlankTile />
           </div>

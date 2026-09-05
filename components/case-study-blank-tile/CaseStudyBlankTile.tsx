@@ -11,7 +11,7 @@ import {
 
 import styles from "./case-study-blank-tile.module.css";
 
-const OPACITY_REST = 0.5;
+const OPACITY_REST = 0.6;
 const OPACITY_PEAK = 0.78;
 const BREATHE_PERIOD_MS = 2600;
 const EXIT_MS = 350;
