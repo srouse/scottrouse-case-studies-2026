@@ -10,10 +10,9 @@ import {
 } from "@/components/constants";
 
 import styles from "./case-study-blank-tile.module.css";
-
-const OPACITY_REST = 0.6;
-const OPACITY_PEAK = 0.78;
-const BREATHE_PERIOD_MS = 2600;
+const OPACITY_REST = 0.2;
+const OPACITY_PEAK = 1;
+const BREATHE_PERIOD_MS = 1600;
 const EXIT_MS = 350;
 
 function prefersReducedMotion(): boolean {
